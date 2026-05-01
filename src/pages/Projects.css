@@ -1,0 +1,97 @@
+.projects-intro {
+  background: var(--grey-bg);
+  border-left: 3px solid var(--green);
+  padding: 20px 24px;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 48px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--grey-border);
+  border-radius: 4px;
+  padding: 32px 28px;
+  transition: all 0.25s var(--ease);
+}
+.project-card:hover {
+  box-shadow: 0 8px 40px rgba(10,22,40,0.10);
+  transform: translateY(-3px);
+  border-color: var(--blue-bright);
+}
+
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.project-card__meta { display: flex; flex-direction: column; gap: 6px; }
+.project-card__type {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: var(--green-muted);
+  padding: 3px 9px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.project-card__location {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 0.78rem; color: var(--grey-light);
+  font-family: var(--font-mono);
+}
+.project-card__capacity {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--grey-light);
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+.project-card__title { margin-bottom: 12px; }
+.project-card__scope { margin-bottom: 20px; }
+
+.project-card__achievements {
+  border-top: 1px solid var(--grey-border);
+  padding-top: 18px;
+}
+.project-card__achievements-title {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey-light);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.project-achievements-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.project-achievements-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--grey-mid);
+}
+.project-achievements-list svg {
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}

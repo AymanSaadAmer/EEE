@@ -1,0 +1,86 @@
+.industry-card {
+  background: var(--white);
+  border: 1px solid var(--grey-border);
+  border-radius: 4px;
+  padding: 32px 28px;
+  transition: all 0.25s var(--ease);
+}
+.industry-card:hover { box-shadow: 0 8px 40px rgba(10,22,40,0.10); transform: translateY(-3px); }
+.industry-card__num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--grey-border);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.industry-card__title { margin-bottom: 12px; }
+.industry-card__services { display: flex; flex-wrap: wrap; gap: 6px; }
+.industry-service-tag {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--grey-bg);
+  color: var(--grey-mid);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.logo-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.logo-placeholder {
+  background: var(--white);
+  border: 2px dashed var(--grey-border);
+  border-radius: 4px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-light);
+}
+
+.testimonial-card {
+  background: var(--grey-bg);
+  border-radius: 4px;
+  padding: 32px 28px;
+}
+.testimonial-card__quote {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--blue-bright);
+  line-height: 0.8;
+  margin-bottom: 12px;
+  opacity: 0.3;
+}
+.testimonial-card__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--grey-dark);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.testimonial-card__author { display: flex; align-items: center; gap: 12px; }
+.testimonial-card__avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--blue-mid); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.testimonial-card__name { font-weight: 600; font-size: 0.88rem; color: var(--navy); }
+.testimonial-card__company { font-size: 0.78rem; color: var(--grey-light); font-family: var(--font-mono); }
+
+@media (max-width: 900px) {
+  .logo-placeholder-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .logo-placeholder-grid { grid-template-columns: repeat(2, 1fr); }
+}
